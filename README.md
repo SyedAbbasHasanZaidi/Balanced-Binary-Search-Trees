@@ -86,14 +86,13 @@ v
 v
  in the tree, or UNDEFINED if there is no such key.
 ### TreeSearchBetween	Searches for all keys between the two given keys (inclusive) and returns the keys in a list in ascending order.
-Examples
+### Examples
 Consider the following tree:
 
 Example Tree
 TreeKthSmallest and TreeKthLargest
 For 
-k
-=
+k =
 1
 , the 
 k
@@ -101,8 +100,7 @@ k
 k
 -th largest key is 27
 For 
-k
-=
+k =
 4
 , the 
 k
@@ -156,6 +154,7 @@ We strongly recommend you to add your own tests, as the given tests are very sim
 
 You can call individual tests by specifying their number(s). For example, to run tests 4, 2, and 7, run
 
+```
 ./testBBST 4 2 7
 testTreeKthSmallest...
 Test passed.
@@ -204,3 +203,4 @@ testTreeSearchBetween...
 Test passed.
 
 All 9 tests passed!
+```
