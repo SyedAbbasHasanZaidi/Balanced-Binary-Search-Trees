@@ -1,0 +1,92 @@
+
+========================================================================
+                          Complexity Analysis
+========================================================================
+
+NOTE:
+- Your time complexities should be in big-O notation.
+- For operations that involve only one set, your time complexities should
+  be in terms of n, where n is the number of elements in the set.
+- For operations that involve two sets, your time complexities should be in
+  terms of n and m, where n and m are the number of elements in each of the
+  sets respectively.
+
+--------
+TreeKthSmallest
+--------
+
+Worst case complexity: O(log n + k)
+
+Explanation: 
+The complexity is sourced from two of the main precodures in the funtion, looping to the smallest
+value then unwinding the recursion to find the kth elements from the smallest element. Thus the 
+worst case scenario is that to reach the smallest value in the tree is log n cost (due to the structre of a BST)
+then rewinding the recursion to get the the kth node form the bottom the thus k traversals.
+
+---------------
+TreeKthLargest
+---------------
+
+Worst case complexity: O(log n + k)
+
+Explanation: 
+The complexity is sourced from two of the main precodures in the funtion, looping to the largest
+value then unwinding the recursion to find the kth elements from the largest element. Thus the 
+worst case scenario is that to reach the largest value in the tree is log n cost (due to the structre of a BST)
+then rewinding the recursion to get the the kth node form the bottom the thus k traversals.
+
+-------------
+TreeLCA
+-------------
+
+Worst case complexity: O(log n)
+
+Explanation: 
+Using pre-order traversal function is broken down into two distinct casses;
+
+case 1: we encounter a node with one of the values before the other.
+
+case 2: we encounter a node which contains both values in either differing subtrees.
+
+Thus each case can be genralised in worst case of O(log n) as the traversal could take 
+us the length of the longest subtree.
+
+-------------
+TreeFloor
+-------------
+
+Worst case complexity: O(log n)
+
+Explanation: 
+The tree recurses down the branches trying to reach the largest value less than key, 
+using left or right traversal depending the current node value and thus the worst case can be genralised 
+to traversing the down the largest subtree, thus O(log n).
+
+
+-------------
+TreeCeiling
+-------------
+
+Worst case complexity: O(log n)
+
+Explanation: 
+The tree recurses down the branches trying to reach the smallest value larger than key, 
+using left or right traversal depending the current node value and thus the worst case can be genralised 
+to traversing the down the largest subtree, thus O(log n).
+
+-------------
+TreeSearchBetween
+-------------
+
+Worst case complexity: O(log n + m)
+
+Explanation: 
+The tree , uses in-order traversal, recursing down the branches trying to reach the 'lower', 
+using left or right traversal depending the current node value while simulataneously adding 
+values to list given a certain range thus the worst case scenario can be genralized to O(log n) 
+to recurse down the length of the largest sub tree than unwinding the recursion until 
+upper value is reaches/exceeded thus traversing up m nodes therefore O(log n + m).
+
+
+
+
